@@ -61,9 +61,9 @@ The repo contains:
 - `.github/instructions/instructions.md` — `.ai` folder conventions the agent
   and skills rely on
 
-Please install these where my Copilot CLI will pick them up (skills as skills,
-the agent as an agent, and the instructions where they'll apply), confirm what
-you installed and where, and clean up any temp clone.
+Please install these where my Copilot CLI (or other ai agent CLI) will pick them up.
+If the user is using a differnt Agent CLI please adapt the installation accordingly.
+confirm what you installed all the skills, agents, instructions and where, and clean up any temp clone.
 ```
 
 To scope the toolkit to a single repository instead of user-wide, tell Copilot
