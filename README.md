@@ -53,22 +53,17 @@ GitHub Copilot CLI and paste this prompt:
 
 ```text
 Clone https://github.com/Cardigan/TroubleshooterAgent and install its
-troubleshooting toolkit into my Copilot CLI config so it's available
-everywhere.
+troubleshooting toolkit into my Copilot CLI so it's available to me.
 
-Do the following:
-1. Clone (or download) the repo to a temp directory.
-2. Copy every folder under its `skills/` into my user skills directory
-   (`~/.copilot/skills/` — on Windows `%USERPROFILE%\.copilot\skills\`),
-   preserving each skill's folder name and `SKILL.md`.
-3. Copy `agents/troubleshooter.md` into my user agents directory
-   (`~/.copilot/agents/` — on Windows `%USERPROFILE%\.copilot\agents\`).
-4. Copy `.github/instructions/instructions.md` somewhere it will be picked up
-   as instructions (or tell me where to put it) so the `.ai` folder
-   conventions the agent/skills reference are available.
-5. Confirm what was installed and clean up the temp clone.
+The repo contains:
+- `skills/` — four `troubleshoot-*` skills, each its own folder with a SKILL.md
+- `agents/troubleshooter.md` — the troubleshooter agent
+- `.github/instructions/instructions.md` — `.ai` folder conventions the agent
+  and skills rely on
 
-Don't overwrite unrelated files; only add these components.
+Please install these where my Copilot CLI will pick them up (skills as skills,
+the agent as an agent, and the instructions where they'll apply), confirm what
+you installed and where, and clean up any temp clone.
 ```
 
 To scope the toolkit to a single repository instead of user-wide, tell Copilot
