@@ -23,7 +23,7 @@ The goal is an honest second opinion: confirm what holds up, challenge weak assu
 
 Determine the `.ai` folder to review:
 
-1. If the user referenced a folder or project (e.g., `@justNotes\Projects\0601-ppvnet-deployment-failure\.ai\`), use that.
+1. If the user referenced a folder or project (e.g., `@justNotes\Projects\0601-deployment-failure\.ai\`), use that.
 2. If the path points at a project folder, append `.ai`.
 3. If nothing is given, use `ask_user` to ask for the project folder or `.ai` path.
 
