@@ -48,16 +48,46 @@ templates.
 
 ## Installation
 
-Copy the components into your Copilot CLI config directory:
+The easiest way to install is to let Copilot CLI do it for you. Open the
+GitHub Copilot CLI and paste this prompt:
+
+```text
+Clone https://github.com/Cardigan/TroubleshooterAgent and install its
+troubleshooting toolkit into my Copilot CLI config so it's available
+everywhere.
+
+Do the following:
+1. Clone (or download) the repo to a temp directory.
+2. Copy every folder under its `skills/` into my user skills directory
+   (`~/.copilot/skills/` — on Windows `%USERPROFILE%\.copilot\skills\`),
+   preserving each skill's folder name and `SKILL.md`.
+3. Copy `agents/troubleshooter.md` into my user agents directory
+   (`~/.copilot/agents/` — on Windows `%USERPROFILE%\.copilot\agents\`).
+4. Copy `.github/instructions/instructions.md` somewhere it will be picked up
+   as instructions (or tell me where to put it) so the `.ai` folder
+   conventions the agent/skills reference are available.
+5. Confirm what was installed and clean up the temp clone.
+
+Don't overwrite unrelated files; only add these components.
+```
+
+To scope the toolkit to a single repository instead of user-wide, tell Copilot
+to copy `skills/` and `agents/` into that repo's `.copilot\skills\` and
+`.copilot\agents\` directories.
+
+### Manual install
+
+If you'd rather do it by hand, clone the repo and copy the components into your
+Copilot CLI config directory:
 
 ```powershell
+git clone https://github.com/Cardigan/TroubleshooterAgent
+cd TroubleshooterAgent
+
 # User-level (applies everywhere)
 Copy-Item -Recurse -Force .\skills\*  "$env:USERPROFILE\.copilot\skills\"
 Copy-Item -Force          .\agents\*  "$env:USERPROFILE\.copilot\agents\"
 ```
-
-Or, to scope them to a single repository, place them under that repo's
-`.copilot\skills\` and `.copilot\agents\` instead.
 
 ## Usage
 
